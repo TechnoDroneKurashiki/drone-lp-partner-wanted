@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テクノドローン認定パートナー募集 | 日本のインフラを空から守る</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#004b87',    // 信頼感のある深い青（楽天風ベース）
+                        secondary: '#00a0e9',  // 明るい水色
+                        accent: '#ff007d',     // コンバージョンを促すマゼンタピンク
+                        surface: '#f4f7f9',    // 薄いグレー背景
+                    },
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', 'Meiryo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { -webkit-font-smoothing: antialiased; }
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-color: #ffffff;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23004b87" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, #004b87 0%, #00a0e9 100%);
+        }
+        .graph-bar-bg { background-color: #e2e8f0; border-radius: 999px; overflow: hidden; height: 16px; width: 100%;}
+        .graph-bar-fill-accent { background-color: #ff007d; height: 100%; display: block; border-radius: 999px;}
+        .graph-bar-fill-primary { background-color: #004b87; height: 100%; display: block; border-radius: 999px;}
+        .number-bg {
+            font-size: 8rem;
+            font-weight: 900;
+            color: #e2e8f0;
+            position: absolute;
+            top: -2.5rem;
+            left: -1rem;
+            z-index: 0;
+            line-height: 1;
+            opacity: 0.6;
+        }
+        .feature-content { position: relative; z-index: 1; }
+        .step-arrow { position: relative; }
+        @media (min-width: 768px) {
+            .step-arrow:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                transform: translateY(-50%);
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 20px solid #cbd5e1;
+                z-index: 10;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface text-slate-800">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white border-b border-slate-200 shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="3"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M7.5 7.5 10.5 10.5"/><path d="M16.5 7.5 13.5 10.5"/><path d="M7.5 16.5 10.5 13.5"/><path d="M16.5 16.5 13.5 13.5"/></svg>
+                <span class="text-2xl font-black tracking-tight text-primary">テクノドローン<span class="text-sm font-bold text-slate-500 ml-2 hidden md:inline">パートナー募集</span></span>
+            </div>
+            <nav class="hidden lg:flex gap-8 text-sm font-bold text-slate-700">
+                <a href="#comparison" class="hover:text-secondary transition-colors">選ばれる理由</a>
+                <a href="#features" class="hover:text-secondary transition-colors">特徴・強み</a>
+                <a href="#requirements" class="hover:text-secondary transition-colors">募集要項・報酬</a>
+                <a href="#flow" class="hover:text-secondary transition-colors">稼働までの流れ</a>
+            </nav>
+            <a href="#entry" class="bg-accent hover:bg-pink-600 text-white px-6 py-3 rounded-md font-bold text-sm shadow-md transition-all flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                無料エントリー・お問い合わせ
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- Hero Section -->
+        <section class="hero-bg py-16 lg:py-24 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="w-full lg:w-1/2">
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-white border-2 border-primary text-primary font-bold px-3 py-1 rounded text-sm">二等資格者歓迎</span>
+                            <span class="bg-white border-2 border-primary text-primary font-bold px-3 py-1 rounded text-sm">全国出張対応</span>
+                            <span class="bg-white border-2 border-accent text-accent font-bold px-3 py-1 rounded text-sm">高単価案件多数</span>
+                        </div>
+                        <h1 class="text-3xl md:text-5xl font-black text-primary leading-tight mb-6">
+                            高単価・安定稼働を実現！<br>
+                            <span class="text-secondary">プラント点検ドローン<br>パートナー募集</span>
+                        </h1>
+                        <p class="text-lg text-slate-700 mb-8 font-medium leading-relaxed">
+                            非GPS環境を制する特許技術と圧倒的な診断力で、大手電力・製鉄会社からの依頼が殺到中。<br>
+                            あなたの操縦スキルを活かし、日本のインフラを共に守りませんか？
+                        </p>
+                        <div class="bg-blue-50 border-l-4 border-secondary p-4 mb-8">
+                            <p class="font-bold text-primary text-lg">平時報酬目安 <span class="text-2xl text-accent mx-2">15,000</span>円〜<span class="text-3xl text-accent mx-2">60,000</span>円 / 日</p>
+                            <p class="text-xs text-slate-600 mt-1">※スキルレベル（Tier1〜3）により変動。交通費・宿泊費別途支給。</p>
+                        </div>
+                        <a href="#entry" class="block w-full sm:w-auto text-center bg-accent hover:bg-pink-600 text-white px-8 py-5 rounded-md font-bold text-xl shadow-xl transition-transform transform hover:-translate-y-1">
+                            無料お問い合わせ・エントリー
+                        </a>
+                    </div>
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="aspect-video bg-slate-800 rounded-2xl overflow-hidden shadow-2xl relative">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-400 font-bold">
+                                                            </div>
+                        </div>
+                        <!-- バッジ -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border-2 border-secondary flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                            <div>
+                                <p class="text-xs text-slate-500 font-bold">独自の教育プログラム</p>
+                                <p class="text-lg font-black text-primary">プラント安全講習完備</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner py-10 px-4 text-center text-white shadow-inner">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">ドローンの資格を活かして、安定した収入を得ませんか？</h2>
+            <p class="mb-6 font-medium">専属社員のサポート付きで、高難度・高単価な現場に挑戦できます。</p>
+            <a href="#entry" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-slate-100 font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-transform transform hover:scale-105">
+                まずは募集要項を見る
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+        </div>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-black text-primary mb-4 border-b-4 border-secondary inline-block pb-2">なぜテクノドローンには依頼が殺到するのか？</h2>
+                    <p class="text-slate-600 mt-4 font-medium text-lg">特許技術とデータ解析力により、従来手法と比べて圧倒的な<span class="text-accent font-bold">「低コスト・短納期・安全性」</span>を実現。<br>だからこそ、全国から案件が絶えず、パートナー様へ安定して業務をご提供できます。</p>
+                </div>
+
+                <!-- 比較表マトリックス -->
+                <div class="overflow-x-auto mb-16">
+                    <table class="w-full min-w-[600px] border-collapse bg-white shadow-lg rounded-xl overflow-hidden">
+                        <thead>
+                            <tr class="bg-slate-100">
+                                <th class="p-4 border border-slate-200 text-center w-1/4"></th>
+                                <th class="p-4 border border-slate-200 text-center text-slate-500 font-bold w-1/3">従来（ゴンドラ等による人力点検）</th>
+                                <th class="p-4 border-2 border-secondary bg-blue-50 text-center text-primary font-black w-1/3">テクノドローン点検</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="p-4 border border-slate-200 bg-slate-50 font-bold text-primary">コスト</th>
+                                <td class="p-4 border border-slate-200 text-center">足場代・特殊機材費が高額</td>
+                                <td class="p-4 border-x-2 border-b border-secondary text-center font-bold text-accent bg-white"><span class="text-xl">大幅なコスト削減</span>が可能</td>
+                            </tr>
+                            <tr>
+                                <th class="p-4 border border-slate-200 bg-slate-50 font-bold text-primary">調査期間</th>
+                                <td class="p-4 border border-slate-200 text-center">準備から撤収まで数週間</td>
+                                <td class="p-4 border-x-2 border-b border-secondary text-center font-bold text-accent bg-white"><span class="text-xl">数日</span>での迅速な完了</td>
+                            </tr>
+                            <tr>
+                                <th class="p-4 border border-slate-200 bg-slate-50 font-bold text-primary">安全性</th>
+                                <td class="p-4 border border-slate-200 text-center">高所作業による墜落・酸欠リスク</td>
+                                <td class="p-4 border-x-2 border-b-2 border-secondary text-center font-bold text-primary bg-white">作業員は地上待機で<span class="text-xl text-accent">安全</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- グラフ比較 -->
+                <h3 class="text-2xl font-black text-center text-primary mb-8">ドローン調査でこれだけ 安く、早く なる！</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- 比較カード1 -->
+                    <div class="bg-surface p-6 rounded-xl border border-slate-200 shadow-md relative pt-10">
+                        <div class="absolute top-0 left-0 bg-primary text-white font-bold py-2 px-6 rounded-br-xl rounded-tl-xl">比較 01</div>
+                        <h4 class="font-bold text-center mb-6 text-lg text-primary border-b border-slate-300 pb-3">大型プラント煙突内部点検（高さ200m）</h4>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between text-sm mb-1 font-bold"><span class="text-slate-500">従来（ゴンドラ）</span><span>約500万円</span></div>
+                            <div class="graph-bar-bg mb-2"><span class="graph-bar-fill-primary" style="width: 100%;"></span></div>
+                            <div class="flex justify-between text-base font-black text-accent mb-1 mt-3"><span>テクノドローン</span><span>約200万円</span></div>
+                            <div class="graph-bar-bg"><span class="graph-bar-fill-accent" style="width: 40%;"></span></div>
+                            <div class="text-right text-sm text-accent font-black mt-2">費用 約60% OFF!</div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-bold"><span class="text-slate-500">従来（ゴンドラ）</span><span>10日間</span></div>
+                            <div class="graph-bar-bg mb-2"><span class="graph-bar-fill-primary" style="width: 100%;"></span></div>
+                            <div class="flex justify-between text-base font-black text-accent mb-1 mt-3"><span>テクノドローン</span><span>2日間</span></div>
+                            <div class="graph-bar-bg"><span class="graph-bar-fill-accent" style="width: 20%;"></span></div>
+                            <div class="text-right text-sm text-accent font-black mt-2">期間 1/5に！</div>
+                        </div>
+                    </div>
+
+                    <!-- 比較カード2 -->
+                    <div class="bg-surface p-6 rounded-xl border border-slate-200 shadow-md relative pt-10">
+                        <div class="absolute top-0 left-0 bg-primary text-white font-bold py-2 px-6 rounded-br-xl rounded-tl-xl">比較 02</div>
+                        <h4 class="font-bold text-center mb-6 text-lg text-primary border-b border-slate-300 pb-3">製鉄所・大型タンク/サイロ内部点検</h4>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between text-sm mb-1 font-bold"><span class="text-slate-500">従来（足場組立）</span><span>約150万円</span></div>
+                            <div class="graph-bar-bg mb-2"><span class="graph-bar-fill-primary" style="width: 100%;"></span></div>
+                            <div class="flex justify-between text-base font-black text-accent mb-1 mt-3"><span>テクノドローン</span><span>約80万円</span></div>
+                            <div class="graph-bar-bg"><span class="graph-bar-fill-accent" style="width: 53%;"></span></div>
+                            <div class="text-right text-sm text-accent font-black mt-2">費用 約47% OFF!</div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-bold"><span class="text-slate-500">従来（足場組立）</span><span>10日間</span></div>
+                            <div class="graph-bar-bg mb-2"><span class="graph-bar-fill-primary" style="width: 100%;"></span></div>
+                            <div class="flex justify-between text-base font-black text-accent mb-1 mt-3"><span>テクノドローン</span><span>2日間</span></div>
+                            <div class="graph-bar-bg"><span class="graph-bar-fill-accent" style="width: 20%;"></span></div>
+                            <div class="text-right text-sm text-accent font-black mt-2">期間 1/5に！</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl font-black text-primary mb-4 border-b-4 border-secondary inline-block pb-2">テクノドローンのパートナーになる<br>4つのメリット</h2>
+                </div>
+
+                <!-- Feature 01 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-24">
+                    <div class="w-full md:w-1/2">
+                        <div class="aspect-video bg-white rounded-xl shadow-lg overflow-hidden flex items-center justify-center text-slate-400 border border-slate-200">
+                                                    </div>
+                    </div>
+                    <div class="w-full md:w-1/2 relative pl-4 md:pl-12">
+                        <div class="number-bg">01</div>
+                        <div class="feature-content">
+                            <h3 class="text-2xl font-black text-primary mb-4">非GPS環境を制する<br><span class="text-accent">特許技術</span>のノウハウ共有</h3>
+                            <p class="text-slate-600 font-medium leading-relaxed mb-4">
+                                煙突内部や暗所など、他では経験できない特殊点検の技術が身につきます。独自取得した特許（第6505927号）に基づく高度な技術力に触れることで、あなたのパイロットとしての市場価値が飛躍的に高まります。
+                            </p>
+                            <p class="text-sm text-slate-500 bg-white p-3 rounded border border-slate-200">主な使用機材：Matrice300 RTK、ELIOS2 等の最先端産業機</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 02 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 mb-24">
+                    <div class="w-full md:w-1/2">
+                        <div class="aspect-video bg-white rounded-xl shadow-lg overflow-hidden flex items-center justify-center text-slate-400 border border-slate-200">
+                                                    </div>
+                    </div>
+                    <div class="w-full md:w-1/2 relative pr-4 md:pr-12">
+                        <div class="number-bg md:left-auto md:-right-4">02</div>
+                        <div class="feature-content">
+                            <h3 class="text-2xl font-black text-primary mb-4">妥協なき「安全基準」と<br><span class="text-accent">独自の教育・OJT制度</span></h3>
+                            <p class="text-slate-600 font-medium leading-relaxed mb-4">
+                                現場に入る前の「プラント特化型安全講習」やOJTを徹底。指差呼称の習慣化、防爆・酸欠エリアの知識など、あなたの身を守り、真のプロフェッショナルとして引き上げる体制を完備しています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 03 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-24">
+                    <div class="w-full md:w-1/2">
+                        <div class="aspect-video bg-white rounded-xl shadow-lg overflow-hidden flex items-center justify-center text-slate-400 border border-slate-200">
+                                                    </div>
+                    </div>
+                    <div class="w-full md:w-1/2 relative pl-4 md:pl-12">
+                        <div class="number-bg">03</div>
+                        <div class="feature-content">
+                            <h3 class="text-2xl font-black text-primary mb-4">スキルに応じた<br><span class="text-accent">Tier評価制度と高報酬</span></h3>
+                            <p class="text-slate-600 font-medium leading-relaxed mb-4">
+                                操縦スキルと安全意識に応じた明確な評価システム（Tier1〜3）を導入。煙突内部等の高難度案件（Tier1）には日給4〜6万円等の高単価を用意し、あなたの技術に見合った報酬をお約束します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 04 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="w-full md:w-1/2">
+                        <div class="aspect-video bg-white rounded-xl shadow-lg overflow-hidden flex items-center justify-center text-slate-400 border border-slate-200">
+                                                    </div>
+                    </div>
+                    <div class="w-full md:w-1/2 relative pr-4 md:pr-12">
+                        <div class="number-bg md:left-auto md:-right-4">04</div>
+                        <div class="feature-content">
+                            <h3 class="text-2xl font-black text-primary mb-4">絶対の安全を守る<br><span class="text-accent">「1チーム3名体制」</span></h3>
+                            <p class="text-slate-600 font-medium leading-relaxed mb-4">
+                                テクノドローンの現場は、すべてを外注に丸投げすることはありません。必ず弊社の社員（現場責任者）が立ち会い、クライアント折衝から安全管理までチームを統括するため、あなたは操縦や補助業務に安心して集中できます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements Section -->
+        <section id="requirements" class="py-20 bg-primary text-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black mb-4 border-b-4 border-secondary inline-block pb-2">募集要項・報酬目安</h2>
+                    <p class="text-blue-100 mt-4 font-medium">高度な飛行技術よりも、泥臭い安全確認を絶対に省略しない「誠実さ」を求めます。</p>
+                </div>
+
+                <div class="bg-white text-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+                    <table class="w-full text-left border-collapse">
+                        <tbody>
+                            <tr class="border-b border-slate-200 flex flex-col md:table-row">
+                                <th class="p-5 md:p-6 bg-slate-50 md:w-1/3 font-black text-primary">対象業務</th>
+                                <td class="p-5 md:p-6 font-medium">発電所、製鉄所、橋梁などのインフラ・プラント設備のドローンによる点検撮影業務。</td>
+                            </tr>
+                            <tr class="border-b border-slate-200 flex flex-col md:table-row">
+                                <th class="p-5 md:p-6 bg-slate-50 font-black text-accent">必須要件</th>
+                                <td class="p-5 md:p-6 font-medium">
+                                    <ul class="list-none space-y-2">
+                                        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-accent mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <strong>二等無人航空機操縦士</strong> 以上の資格保有</li>
+                                        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-accent mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> 日本全国への出張が可能な方（交通費・宿泊費支給）</li>
+                                        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-accent mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> 契約後、弊社指定の「現場安全・高所作業講習」を受講可能な方</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-slate-200 flex flex-col md:table-row">
+                                <th class="p-5 md:p-6 bg-slate-50 font-black text-secondary">歓迎要件</th>
+                                <td class="p-5 md:p-6 font-medium">
+                                    <ul class="list-disc ml-5 space-y-1 text-slate-600">
+                                        <li>Matrice300 RTK、ELIOSシリーズの操縦経験</li>
+                                        <li>フルハーネス型安全帯使用従事者特別教育 修了者</li>
+                                        <li>測量、非破壊検査などの現場経験</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-slate-200 flex flex-col md:table-row">
+                                <th class="p-5 md:p-6 bg-slate-50 font-black text-primary">稼働頻度</th>
+                                <td class="p-5 md:p-6 font-medium">月1〜2回程度（案件ベースでのご相談・土日稼働あり）</td>
+                            </tr>
+                            <tr class="flex flex-col md:table-row">
+                                <th class="p-5 md:p-6 bg-slate-50 font-black text-primary">報酬目安（日給）</th>
+                                <td class="p-5 md:p-6">
+                                    <div class="space-y-3">
+                                        <div class="flex justify-between items-center bg-slate-100 p-3 rounded-md border-l-4 border-slate-400">
+                                            <span class="font-bold text-slate-600">Tier 3（補助者・安全管理者）</span>
+                                            <span class="font-black text-lg">15,000円 〜 20,000円</span>
+                                        </div>
+                                        <div class="flex justify-between items-center bg-blue-50 p-3 rounded-md border-l-4 border-secondary">
+                                            <span class="font-bold text-primary">Tier 2（一般点検パイロット）</span>
+                                            <span class="font-black text-lg text-primary">25,000円 〜 35,000円</span>
+                                        </div>
+                                        <div class="flex justify-between items-center bg-pink-50 p-3 rounded-md border-l-4 border-accent">
+                                            <span class="font-bold text-accent">Tier 1（高難度パイロット）</span>
+                                            <span class="font-black text-xl text-accent">40,000円 〜 60,000円</span>
+                                        </div>
+                                        <p class="text-xs text-slate-500 mt-3 font-medium">※交通費・宿泊費は別途実費支給。<br>※機材は原則として弊社所有のものを使用していただきます。</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flow Section -->
+        <section id="flow" class="py-20 bg-surface">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-black text-primary mb-2">簡単 5ステップ！ 稼働開始までの流れ</h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-2">
+                    <!-- Step 1 -->
+                    <div class="flex-1 text-center step-arrow bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative z-10">
+                        <div class="text-secondary font-black mb-2">STEP <span class="text-3xl text-primary">01</span></div>
+                        <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4 text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"/><path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"/></svg>
+                        </div>
+                        <h4 class="font-black text-primary mb-2">お問い合わせ<br>エントリー</h4>
+                        <p class="text-xs text-slate-500 font-medium">フォームより資格や経験をご送信ください。</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex-1 text-center step-arrow bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative z-10">
+                        <div class="text-secondary font-black mb-2">STEP <span class="text-3xl text-primary">02</span></div>
+                        <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4 text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                        </div>
+                        <h4 class="font-black text-primary mb-2">オンライン面談</h4>
+                        <p class="text-xs text-slate-500 font-medium">安全意識やチームワークへの適性を確認します。</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex-1 text-center step-arrow bg-white p-6 rounded-xl border-2 border-secondary shadow-md relative z-10 transform md:-translate-y-2">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap">必須！</div>
+                        <div class="text-secondary font-black mb-2">STEP <span class="text-3xl text-primary">03</span></div>
+                        <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4 text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <h4 class="font-black text-primary mb-2">プラント安全・<br>機材特化講習</h4>
+                        <p class="text-xs text-slate-500 font-medium">独自の厳格なルールの座学・実技教育。</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex-1 text-center step-arrow bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative z-10">
+                        <div class="text-secondary font-black mb-2">STEP <span class="text-3xl text-primary">04</span></div>
+                        <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4 text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h4 class="font-black text-primary mb-2">現場OJT同行</h4>
+                        <p class="text-xs text-slate-500 font-medium">社員の指導のもと、まずは補助業務からスタート。</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="flex-1 text-center bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative z-10">
+                        <div class="text-secondary font-black mb-2">STEP <span class="text-3xl text-primary">05</span></div>
+                        <div class="w-16 h-16 mx-auto bg-pink-50 rounded-full flex items-center justify-center mb-4 text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                        </div>
+                        <h4 class="font-black text-primary mb-2">認定パートナー<br>稼働開始！</h4>
+                        <p class="text-xs text-slate-500 font-medium">Tier判定後、正式に案件の依頼をスタートします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-black text-center text-primary mb-12 border-b-4 border-secondary inline-block pb-2 mx-auto block w-fit">よくあるご質問</h2>
+                <div class="bg-surface p-8 rounded-xl border border-slate-200 shadow-sm">
+                    
+                    <div class="border-b border-slate-300 faq-item">
+                        <button class="w-full text-left py-5 flex justify-between items-center focus:outline-none group faq-toggle">
+                            <span class="font-bold text-primary group-hover:text-secondary transition-colors pr-4 flex items-center gap-3"><span class="text-secondary text-xl">Q</span> 機体は自分で購入・用意する必要がありますか？</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-slate-400 transform transition-transform duration-300 faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 max-h-0 opacity-0 faq-content">
+                            <p class="text-slate-700 pl-8 text-sm font-medium leading-relaxed pb-6 flex items-start gap-3"><span class="text-accent text-xl font-bold">A</span> <span>いいえ、原則として弊社所有の特殊機材（Matrice300 RTKやELIOS2等）を現場に持ち込み、それを使用していただきます。パートナー様に高額な機材投資を強いることはありません。</span></p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-slate-300 faq-item">
+                        <button class="w-full text-left py-5 flex justify-between items-center focus:outline-none group faq-toggle">
+                            <span class="font-bold text-primary group-hover:text-secondary transition-colors pr-4 flex items-center gap-3"><span class="text-secondary text-xl">Q</span> プラントの現場は危険ではありませんか？</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-slate-400 transform transition-transform duration-300 faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 max-h-0 opacity-0 faq-content">
+                            <p class="text-slate-700 pl-8 text-sm font-medium leading-relaxed pb-6 flex items-start gap-3"><span class="text-accent text-xl font-bold">A</span> <span>危険を伴う環境であるからこそ、事前のKY（危険予知）活動、フルハーネス等の装備の徹底、酸欠危険場所への立ち入り禁止（ドローンのみ進入させる）など、人の安全を最優先した絶対ルールを敷いています。社員の指示に従いルールを守れば安全に業務を遂行できます。</span></p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-slate-300 faq-item">
+                        <button class="w-full text-left py-5 flex justify-between items-center focus:outline-none group faq-toggle">
+                            <span class="font-bold text-primary group-hover:text-secondary transition-colors pr-4 flex items-center gap-3"><span class="text-secondary text-xl">Q</span> 月にどれくらい稼働できますか？</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-slate-400 transform transition-transform duration-300 faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 max-h-0 opacity-0 faq-content">
+                            <p class="text-slate-700 pl-8 text-sm font-medium leading-relaxed pb-6 flex items-start gap-3"><span class="text-accent text-xl font-bold">A</span> <span>案件の状況やご本人のTier（スキルレベル）によりますが、月1〜2回程度を想定しています。副業としての参加や、自営で空撮事業を行っている方の閑散期の稼働も歓迎しています。</span></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA Banner -->
+        <div class="cta-banner py-16 px-4 text-center text-white border-y-4 border-secondary">
+            <h2 class="text-3xl md:text-4xl font-black mb-4">テクノドローンのプロ集団へ、<br class="md:hidden">ようこそ。</h2>
+            <p class="mb-8 font-medium text-lg">まずは以下より、お気軽にお問い合わせ・エントリーください。</p>
+            <a href="#entry" class="inline-flex items-center gap-2 bg-accent hover:bg-pink-600 text-white font-bold py-5 px-12 rounded-full text-xl shadow-xl shadow-pink-900/30 transition-transform transform hover:scale-105">
+                無料エントリー・お問い合わせはこちら
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+        </div>
+
+        <!-- Contact Form Section -->
+        <section id="entry" class="py-20 bg-slate-100">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-primary mb-4">お問い合わせ・エントリーフォーム</h2>
+                    <p class="text-slate-600 font-medium">必要事項をご入力の上、送信してください。<br>担当者より通常2営業日以内にご連絡いたします。</p>
+                </div>
+
+                <form class="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-slate-200" onsubmit="event.preventDefault(); alert('デモ画面のため送信されません。');">
+                    <div class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-primary mb-2">お名前 <span class="text-accent ml-1">*</span></label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-md border border-slate-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" placeholder="山田 太郎" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-primary mb-2">フリガナ <span class="text-accent ml-1">*</span></label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-md border border-slate-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" placeholder="ヤマダ タロウ" />
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-primary mb-2">メールアドレス <span class="text-accent ml-1">*</span></label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-md border border-slate-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" placeholder="mail@example.com" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-primary mb-2">電話番号 <span class="text-accent ml-1">*</span></label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-md border border-slate-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" placeholder="090-XXXX-XXXX" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-primary mb-2">保有資格 <span class="text-accent ml-1">*</span></label>
+                            <select required class="w-full px-4 py-3 rounded-md border border-slate-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all bg-white font-medium text-slate-700">
+                                <option value="">選択してください</option>
+                                <option value="1">一等無人航空機操縦士</option>
+                                <option value="2">二等無人航空機操縦士</option>
+                                <option value="none">取得予定・その他</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-primary mb-2">過去の業務経験・志望動機など</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-md border border-slate-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" placeholder="測量での飛行経験や、使用機材（Mavic等）、意気込みをご記入ください。"></textarea>
+                        </div>
+
+                        <div class="pt-6">
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 rounded-md shadow-md transition-all text-lg flex justify-center items-center gap-2">
+                                入力内容を確認する
+                            </button>
+                            <p class="text-center text-xs text-slate-500 mt-4">※本フォームはデモ画面のため実際には送信されません。</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-blue-100 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="3"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M7.5 7.5 10.5 10.5"/><path d="M16.5 7.5 13.5 10.5"/><path d="M7.5 16.5 10.5 13.5"/><path d="M16.5 16.5 13.5 13.5"/></svg>
+                    <span class="text-lg font-black tracking-tight">テクノドローン株式会社</span>
+                </div>
+                <div class="flex gap-6 text-sm font-medium">
+                    <a href="#" class="hover:text-white transition-colors">運営会社</a>
+                    <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-xs border-t border-blue-800 pt-8 text-blue-300">
+                &copy; 2026 Techno Drone Co., Ltd. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ Accordion Logic
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('.faq-icon');
+                    
+                    if (content.classList.contains('max-h-0')) {
+                        // Open
+                        content.classList.remove('max-h-0', 'opacity-0');
+                        content.classList.add('max-h-96', 'opacity-100');
+                        icon.classList.add('rotate-180');
+                    } else {
+                        // Close
+                        content.classList.add('max-h-0', 'opacity-0');
+                        content.classList.remove('max-h-96', 'opacity-100');
+                        icon.classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
